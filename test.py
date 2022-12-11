@@ -1,17 +1,11 @@
-#importing file
 from ets2sdkclient import ets2sdkclient
-#Stuff For Speed Limit And Cruise
 import math
-#Giving it cool names
+import time
 e = ets2sdkclient()
-#Updating the values
-e.update()
-#v < Use this to print all 
-#e.printalll()
-
-#Setting the values
-limit = int(e.speedLimit * 3.6)
-speed = math.ceil(e.cruiseControlSpeed * 3.6)
-#Printing
-print(limit)
-print(speed)
+while(True):
+    time.sleep(1)
+    e.update()
+    #e.printalll()
+    limit = int(e.speedLimit * 3.6)
+    speed = math.ceil(e.cruiseControlSpeed * 3.6)
+    print(e.BlinkerLeftActive, limit, speed, e.BlinkerRightActive)

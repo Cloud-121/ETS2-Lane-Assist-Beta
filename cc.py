@@ -14,12 +14,13 @@ keyu = '/'
 keyd = '.'
 #Being so cool and setting up a while loop
 while(True):
+    #Updating stuff
+    time.sleep(1)
+    e.update()
     #Checking to see if he is a cool kid
     if (accon == False):
         continue    #He not a cool kid
 
-    time.sleep(1)
-    e.update()
     #e.printalll
     limit = int(e.speedLimit * 3.6)
     speed = math.ceil(e.cruiseControlSpeed * 3.6)

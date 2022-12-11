@@ -34,12 +34,12 @@ class Ets2SdkBoolean():
 class ets2sdkclient:
     def GetBool(self, i):
         if (i == Ets2SdkBoolean.TrailerAttached):
-            return int(self.flags[1].encode('hex'), 16) > 0
+            return int(str(self.flags[1]), 16) > 0
         else:
-            return int(self.aux[i].encode('hex'), 16) > 0
+            return int(str(self.aux[i]), 16) > 0
             
     def update(self):
-        self.mm = mmap.mmap(0, 1024, "Local\\SimTelemetryETS2")
+        self.mm = mmap.mmap(0, 1024, "Local\SimTelemetryETS2")
         
         #[FieldOffset(0)]
         self.time = struct.unpack("I", self.mm[0:4])[0]
@@ -299,4 +299,4 @@ class ets2sdkclient:
         attrs = vars(self)
         # {'kids': 0, 'name': 'Dog', 'color': 'Spotted', 'age': 10, 'legs': 2, 'smell': 'Alot'}
         # now dump this in some way or another
-        print (', \n'.join("%s: %s" % item for item in attrs.items()))
+        print(', \n'.join("%s: %s" % item for item in list(attrs.items())))

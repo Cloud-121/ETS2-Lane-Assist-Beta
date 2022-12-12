@@ -5,19 +5,28 @@ import math
 import time
 import sys
 from pynput.keyboard import Key, Controller
+import settingsInterface as settings
 #Setting up the coolest trun on stuff
-accon = True
-debug = True
+global accon
+global debug
+global keyu
+global keyd
+
+accon = False
+debug = False
+
+accon = settings.GetSettings("Cruise", "accon")
+debug = settings.GetSettings("Cruise", "debug")
+keyu = settings.GetSettings("Cruise", "keyu")
+keyd = settings.GetSettings("Cruise", "keyd")
 #Being so cool to give it a e, etc
 e = ets2sdkclient()
 keyboard = Controller()
-keyu = '/'
-keyd = '.'
 #Being so cool and setting up a while loop
 #checking to see if he is a cool kid
 if(accon == False):
     if (debug == True):
-                    print("Pass check")
+                    print("Pass check acc off")
 else:
         e.update()
         #e.printalll

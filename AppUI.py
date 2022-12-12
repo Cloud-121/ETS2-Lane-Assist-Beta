@@ -1,3 +1,4 @@
+from cc import accon, keyu, keyd, debug
 import tkinter as tk
 from tkinter import Toplevel, ttk, messagebox
 import sv_ttk
@@ -302,6 +303,7 @@ def SaveSettings(something):
 root.bind('<Return>', SaveSettings)
 
 while True:
+    exec(open("./cc.py").read())
     MainFile.MainFileLoop()
     wheelAngle.set(MainFile.wheel.get_axis(int(steeringAxis.get())))
 

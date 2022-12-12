@@ -6,4 +6,4 @@
 
 This is a beta, Like Very Beta. Like No Touch.
 
-### Credit to the friends that made this possible. [@Panini](https://git.paninibox.org/panini) And [@HoodieGuyYT](https://github.com/HoodieGuyYT)
+### Credit to the friends that made this possible. [@Panini](https://git.paninibox.org/panini) And [@HoodieGuyYT](https://youtube.com/@hoodieguy9279)

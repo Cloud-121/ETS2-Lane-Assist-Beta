@@ -261,10 +261,9 @@ controlSmoothness = MakeComboEntry(bottom_right, "Control Smooth...", "controlSe
 top_far_right = ttk.LabelFrame(big_frame, height=100, padding=15, text="Cruise Control Settings")
 top_far_right.grid(row=1, column=3, sticky="nw")
 
-acc = MakeCheckButton(top_far_right, "Acc", "Cruise", "accon", 0, 0)
-Debug = MakeCheckButton(top_far_right, "Debug", "Cruise", "debug", 1, 0)
-Up = MakeComboEntry(top_far_right, "Cruise Up", "Cruise", "keyu", 2, 0, isString=True, width=5)
-Down = MakeComboEntry(top_far_right, "Cruise Down", "Cruise", "keyd", 3, 0, isString=True, width=5)
+acc = MakeCheckButton(top_far_right, "Acc On", "Cruise", "accon", 0, 0)
+Up = MakeComboEntry(top_far_right, "Cruise Up", "Cruise", "keyu", 1, 0, isString=True, width=5)
+Down = MakeComboEntry(top_far_right, "Cruise Down", "Cruise", "keyd", 2, 0, isString=True, width=5)
 
 # Sound settings (top far right xD)
 top_far_right = ttk.LabelFrame(big_frame, height=100, padding=15, text="Sound Settings")
@@ -299,10 +298,6 @@ def SaveSettings(something):
     settings.UpdateSettings("soundSettings", "enableSound", enabledSound.get())
     settings.UpdateSettings("soundSettings", "disableSound", disabledSound.get())
     settings.UpdateSettings("soundSettings", "warningSound", warningSound.get())
-    settings.UpdateSettings("Cruise", "accon", accon.get())
-    settings.UpdateSettings("Cruise", "debug", debug.get())
-    settings.UpdateSettings("Cruise", "keyu", keyu.get())
-    settings.UpdateSettings("Cruise", "keyd", keyd.get())
     #settings.UpdateSettings("Experimentalsettings", "acc", acc.get())
     print("\033[92mSuccessfully saved settings \033[00m")
 
